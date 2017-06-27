@@ -1,0 +1,56 @@
+﻿<UserControl 
+    x:Name="LayoutRoot"
+    x:Class="SeniorMoment.Views.NumberStrip"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="using:SeniorMoment"
+    xmlns:m="using:SeniorMoment.Models"
+    xmlns:v="using:SeniorMoment.Views"
+    xmlns:s="using:SeniorMoment.Services"
+    xmlns:vm="using:SeniorMoment.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="320"
+    d:DesignWidth="60"
+    Height="320" Width="60"
+             
+   >
+    <Canvas Height="330" Width="70" GotFocus="NumberStripCanvas_GotFocus">
+        <v:NumberedButton 
+                HorizontalAlignment="Stretch"   
+                Width="60" Height="60"
+                Something="abc"
+                x:Name="NumberedButtonPlusPlus" 
+                Canvas.Top="5"   
+                Canvas.Left="5"
+                Visibility="Visible" />
+        <v:NumberedButton   
+                HorizontalAlignment="Stretch" 
+                Width="60" Height="60" 
+                Number="+1" Index="1"
+                x:Name="NumberedButtonPlus"
+                Canvas.Left="5" Canvas.Top="70"  
+                Visibility="Visible" />
+        <v:NumberedButton 
+                HorizontalAlignment="Stretch"  
+                Width="60" Height="60" 
+                Number="0" Index="2"
+                x:Name="NumberedButtonValue"
+                Canvas.Left="5" Canvas.Top="135" 
+                Visibility="Collapsed"/>
+        <v:NumberedButton 
+                HorizontalAlignment="Stretch"  
+                Width="60" Height="60" 
+                Number="-1" Index="3"
+                x:Name="NumberedButtonLess"
+                Canvas.Left="5" Canvas.Top="200" Visibility="Visible" />
+        <v:NumberedButton 
+                HorizontalAlignment="Stretch"  
+                Width="60" Height="60" 
+                Tag="| Numbers +10,+1,0,-1,-10"
+                Number="-5" Index="4"
+                x:Name="NumberedButtonLessLess"
+                Canvas.Left="5" Canvas.Top="265" Visibility="Visible" />
+    </Canvas>
+</UserControl>

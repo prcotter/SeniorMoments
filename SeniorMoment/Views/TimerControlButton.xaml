@@ -1,0 +1,27 @@
+﻿<UserControl 
+    
+    x:Class="SeniorMoment.Views.TimerControlButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:v="using:SeniorMoment.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="60"
+    d:DesignWidth="60" 
+    Background="Transparent">
+
+    <Canvas >
+        <Button     Height="60" Width="60"
+                    Tapped="Button_Tapped"
+                    IsHitTestVisible="True"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Visibility="{x:Bind CalculatedVisibility,Mode=OneWay}"
+                    FocusEngaged="Button_FocusEngaged" FocusDisengaged="Button_FocusDisengaged"
+                    Background="Transparent">
+
+            <Image Source="{x:Bind UriSource,Mode=OneWay}" 
+                   IsHitTestVisible="False"  />
+        </Button>
+    </Canvas>
+</UserControl>

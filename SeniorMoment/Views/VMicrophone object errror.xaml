@@ -1,0 +1,40 @@
+﻿<UserControl
+    x:Name="Microphone"
+    x:Class="SeniorMoment.Views.VMicrophone"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:v="using:SeniorMoment.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+    <Canvas>
+        <Border CornerRadius="34" 
+                        VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Width="68"
+                        IsHitTestVisible="{x:Bind MicrophoneBorderIsHitTestVisible,Mode=OneWay }"
+                        PointerPressed="MicrophoneBorder_PointerPressed"
+                        PointerReleased="MicrophoneBorder_PointerReleased"
+                        PointerEntered="MicrophoneBorder_PointerEntered"
+                        PointerExited="MicrophoneBorder_PointerExited"
+                        BorderThickness="0"
+                        Background="{x:Bind MicrophoneBackgroundBrush,Mode=OneWay}"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Opacity="{x:Bind MicrophoneBackgroundOpacity,Mode=OneWay}">
+
+            <Button x:Name="Record_Button"
+                            Height="64" Width="64"
+                            BorderThickness="0"
+                            Background="Transparent" 
+                            IsHitTestVisible="False" >
+
+                <Image Source="/assets/Microphone_Icon_48.png"
+                            Height="64" Width="64"
+                            VerticalAlignment="Center" HorizontalAlignment="Center"
+                            Opacity="{x:Bind MicrophoneOpacity,Mode=OneWay}"
+                            Stretch="None"/>
+            </Button>
+        </Border>
+    </Canvas>
+</UserControl>

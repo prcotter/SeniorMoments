@@ -1,0 +1,31 @@
+﻿<UserControl x:Name="Numbered_Button"
+    x:Class="SeniorMoment.Views.NumberedButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="using:SeniorMoment"
+    xmlns:m="using:SeniorMoment.Models"
+    xmlns:v="using:SeniorMoment.Views"
+    xmlns:s="using:SeniorMoment.Services"
+    xmlns:vm="using:SeniorMoment.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="70" 
+    d:DesignWidth="70"  
+    Background="Transparent"
+    >
+    
+    <Border x:Name="NumberedButtonBorder" 
+            Background="Red" 
+            CornerRadius="5" BorderThickness="0" 
+            Width="60" Height="60">
+        
+        <Button x:Name="JumpButton" Foreground="White" FontSize="32" BorderThickness="0" Padding="0"
+            Background="Transparent" 
+            Click="JumpButton_Click"  
+            Width="60" Height="60">
+            -5
+        </Button>
+        
+    </Border>
+</UserControl>
